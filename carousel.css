@@ -1,0 +1,330 @@
+@font-face {
+    font-family: 'leto_slab_condensedbold';
+    src: url('css/fonts/letoslabcondensed-bold-webfont.woff2') format('woff2'),
+         url('css/fonts/letoslabcondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'leto_slab_condensedregular';
+    src: url('css/fonts/letoslabcondensed-regular-webfont.woff2') format('woff2'),
+         url('css/fonts/letoslabcondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
+
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+  -webkit-transition: 0.9s ease-in-out left;
+transition: 0.9s ease-in-out left;
+-webkit-transition: 0.9s, ease-in-out, left;
+-moz-transition: .9s, ease-in-out, left;
+-o-transition: .9s, ease-in-out, left;
+transition: .9s, ease-in-out, left;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+ color: rgba(199, 19, 93, 1);
+ font-family: 'leto_slab_condensedregular';
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: 'Gentium Book Basic', serif;
+  font-size: 16px;
+  color: #000;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+
+.carousel-control.left {
+    background-image: -webkit-linear-gradient(left,rgba(252, 228, 224, 0.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -o-linear-gradient(left,rgba(252, 228, 224, 0.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(252, 228, 224, 0.5)),to(rgba(0,0,0,.0001)));
+    background-image: linear-gradient(to right,rgba(252, 228, 224, 0.5) 0,rgba(0,0,0,.0001) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+    }
+
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(252, 228, 224, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+  }
+
+  .navbar-inverse {
+       background-color: rgba(250, 209, 206, 0.7)!important;
+    border-color: #f2dede;
+    background-image: linear-gradient( 45deg, rgba(252, 228, 224, 1), rgba(250, 209, 206, 1) );
+    box-shadow: 0 1px 2px rgb(214, 172, 167);
+  }
+
+  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: rgba(240, 135, 170, 1);
+        color: #fff;
+    background-color: rgba(240, 135, 170, 1);
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'leto_slab_condensedbold';
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #f05b89;
+    font-family: 'leto_slab_condensedbold';
+}
+
+@media (min-width: 768px){
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
+}
+
+.nav-top {
+      margin-top: -30px;
+}
+
+
+.carousel-inner > .item > .otra > img {
+    position: absolute;
+     bottom: 0;
+    right: 0;
+}
+
+.carousel-inner > .item > .tresa > img {
+    position: absolute;
+     bottom: 0;
+    left: 0;
+}
+
+.carousel-inner > .item > .cetri > img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/*Pogas*/
+
+.btn-primary {
+    color: #fff;
+    background-color: #fce0dc;
+    border-color: #e0bfba;
+  }
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: rgba(251, 221, 218, 0.52);
+    border-color: #fbddd9;
+  }
+
+.akcija-heading {
+    position: relative;
+    width: 100%;
+}
+
+.akcija-heading > h1 {
+        text-align: -webkit-center;
+        color: #f087aa;
+        font-size: 51px;
+}
+
+.anesa {
+    right: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.lapa {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    margin-left:150px;
+    margin-bottom:150px;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+     -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+     -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+     -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left; 
+}
+
+.makeup {
+  margin-right:100px;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+}
